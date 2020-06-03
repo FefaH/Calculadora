@@ -22,6 +22,10 @@ function App() {
       resultado = parseInt(primerNumero) - parseInt(segundoNumero)
       console.log(resultado)
     }
+    const multiplicarDatos = () => {
+      resultado = parseInt(primerNumero) * parseInt(segundoNumero)
+      console.log(resultado)
+    }
 
     
   return (
@@ -66,6 +70,14 @@ function App() {
           <div className = "form-inline">
             
             <button type = "button" className = "btn btn-warning float-right mx-5" onClick = {() => restarDatos()}>Restar</button>
+          </div>
+        </form>
+
+        <hr/>
+        <form onSubmit = {multiplicarDatos}>
+          <div className = "form-inline">
+            
+            <button type = "button" className = "btn btn-warning float-right mx-5" onClick = {() => multiplicarDatos()}>Multiplicar</button>
           </div>
         </form>
 
