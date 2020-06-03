@@ -4,6 +4,7 @@ import React from 'react';
 function App() {
     var [primerNumero, setPrimerNumero] = React.useState(Number)
     var [segundoNumero, setSegundoNumero] = React.useState(Number)
+    var resultado = 0;
 
     const guardarDatos1 = (e) => {
       
@@ -13,6 +14,12 @@ function App() {
 
       console.log(segundoNumero)
     }
+    const sumarDatos = () => {
+      resultado = parseInt(primerNumero) + parseInt(segundoNumero)
+      console.log(resultado)
+    }
+
+    
   return (
     <div className="container mt-5">
 
@@ -39,6 +46,14 @@ function App() {
                onChange = {(e) => setSegundoNumero(e.target.value)}
            />
             <button type = "button" className = "btn btn-primary mb-2" onClick = {() => guardarDatos2()}>Aceptar</button>
+          </div>
+        </form>
+
+        <hr/>
+        <form onSubmit = {sumarDatos}>
+          <div className = "form-inline">
+           
+            <button type = "button" className = "btn btn-warning float-right mx-5" onClick = {() => sumarDatos()}>Sumar</button>
           </div>
         </form>
 
