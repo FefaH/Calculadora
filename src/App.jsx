@@ -64,7 +64,7 @@ function App() {
         <hr/>
         <form onSubmit = {sumarDatos}>
           <div className = "form-inline">
-           
+          <img src= "/imagen/Suma.png" alt="imagen"/>
             <button type = "button" className = "btn btn-warning float-right mx-5" onClick = {() => sumarDatos()}>Sumar</button>
           </div>
         </form>
@@ -72,7 +72,7 @@ function App() {
         <hr/>
         <form onSubmit = {restarDatos}>
           <div className = "form-inline">
-            
+          <img src= "/imagen/Resta.png" alt="imagen"/>
             <button type = "button" className = "btn btn-warning float-right mx-5" onClick = {() => restarDatos()}>Restar</button>
           </div>
         </form>
@@ -80,7 +80,7 @@ function App() {
         <hr/>
         <form onSubmit = {multiplicarDatos}>
           <div className = "form-inline">
-            
+          <img src= "/imagen/Multiplicacion.png" alt="imagen"/>
             <button type = "button" className = "btn btn-warning float-right mx-5" onClick = {() => multiplicarDatos()}>Multiplicar</button>
           </div>
         </form>
@@ -88,7 +88,7 @@ function App() {
         <hr/>
         <form onSubmit = {dividirDatos}>
           <div className = "form-inline">
-            
+          <img src= "/imagen/Divicion.png" alt="imagen"/>
             <button type = "button" className = "btn btn-warning float-right mx-5" onClick = {() => dividirDatos()}>Dividir</button>
           </div>
         </form>
