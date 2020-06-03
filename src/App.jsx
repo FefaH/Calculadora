@@ -1,25 +1,49 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+
 
 function App() {
+    var [primerNumero, setPrimerNumero] = React.useState(Number)
+    var [segundoNumero, setSegundoNumero] = React.useState(Number)
+
+    const guardarDatos1 = (e) => {
+      
+      console.log(primerNumero)
+    }
+    const guardarDatos2 = (e) => {
+
+      console.log(segundoNumero)
+    }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container mt-5">
+
+      <h1 className="text-center">Calculadora simple</h1>
+        <hr/>
+        <form onSubmit = { guardarDatos1 }>
+        <div className="form-inline"> 
+           <input 
+               className = "form-control mb-2 mx-2"
+               type = "number"
+               placeholder = "Ingrese numero"
+               onChange = {(e) => setPrimerNumero(e.target.value)}
+            />
+           <button type = "button" className = "btn btn-primary mb-2" onClick = {() => guardarDatos1()}>Aceptar</button>
+          
+        </div>
+        </form>
+        <form onSubmit = {guardarDatos2}>
+          <div className="form-inline">
+            <input 
+               className = "form-control mb-2 mx-2"
+               type = "number"
+               placeholder = "Ingrese numero"
+               onChange = {(e) => setSegundoNumero(e.target.value)}
+           />
+            <button type = "button" className = "btn btn-primary mb-2" onClick = {() => guardarDatos2()}>Aceptar</button>
+          </div>
+        </form>
+
     </div>
+    
   );
 }
 
