@@ -16,19 +16,19 @@ function App() {
     }
     const sumarDatos = () => {
       resultado = parseInt(primerNumero) + parseInt(segundoNumero)
-      console.log(resultado)
+      alert('El resultado es: ' + resultado)
     }
     const restarDatos = () => {
       resultado = parseInt(primerNumero) - parseInt(segundoNumero)
-      console.log(resultado)
+      alert('El resultado es: ' + resultado)
     }
     const multiplicarDatos = () => {
       resultado = parseInt(primerNumero) * parseInt(segundoNumero)
-      console.log(resultado)
+      alert('El resultado es: ' + resultado)
     }
     const dividirDatos = () => {
       resultado = parseInt(primerNumero) / parseInt(segundoNumero)
-      console.log(resultado)
+      alert('El resultado es: ' + resultado)
     }
 
     
@@ -37,29 +37,36 @@ function App() {
 
       <h1 className="text-center">Calculadora simple</h1>
         <hr/>
-        <form onSubmit = { guardarDatos1 }>
-        <div className="form-inline"> 
-           <input 
-               className = "form-control mb-2 mx-2"
-               type = "number"
-               placeholder = "Ingrese numero"
-               onChange = {(e) => setPrimerNumero(e.target.value)}
-            />
-           <button type = "button" className = "btn btn-primary mb-2" onClick = {() => guardarDatos1()}>Aceptar</button>
-          
-        </div>
-        </form>
-        <form onSubmit = {guardarDatos2}>
-          <div className="form-inline">
-            <input 
-               className = "form-control mb-2 mx-2"
-               type = "number"
-               placeholder = "Ingrese numero"
-               onChange = {(e) => setSegundoNumero(e.target.value)}
-           />
-            <button type = "button" className = "btn btn-primary mb-2" onClick = {() => guardarDatos2()}>Aceptar</button>
+        <div className="row">
+          <div className="col-8">
+            <form onSubmit = { guardarDatos1 }>
+            <div className="form-inline"> 
+              <input 
+                  className = "form-control mb-2 mx-2"
+                  type = "number"
+                  placeholder = "Ingrese numero"
+                  onChange = {(e) => setPrimerNumero(e.target.value)}
+                />
+              <button type = "button" className = "btn btn-primary mb-2" onClick = {() => guardarDatos1()}>Aceptar</button>
+              
+            </div>
+            </form>
+            <form onSubmit = {guardarDatos2}>
+            
+              <div className="form-inline">
+                <input 
+                  className = "form-control mb-2 mx-2"
+                  type = "number"
+                  placeholder = "Ingrese numero"
+                  onChange = {(e) => setSegundoNumero(e.target.value)}
+              />
+                <button type = "button" className = "btn btn-primary mb-2" onClick = {() => guardarDatos2()}>Aceptar</button>
+              </div>
+            </form>
+            </div>
           </div>
-        </form>
+
+        
 
         <hr/>
         <form onSubmit = {sumarDatos}>
